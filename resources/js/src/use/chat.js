@@ -17,7 +17,6 @@ export default function useChat() {
             await api
                 .post("/api/chat/send", { text: form.message })
                 .then((response) => {
-                  console.log(response.data);
                     messages.value.push(response.message);
                 });
         } catch (error) {
